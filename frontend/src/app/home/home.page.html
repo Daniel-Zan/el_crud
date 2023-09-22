@@ -24,4 +24,22 @@
       </ion-col>
     </ion-row>
 </ion-list>
+
+<ion-list>
+  <ion-list-header>
+    LISTA DE LOS ESTUDIANTES
+  </ion-list-header>
+
+  <ion-item lines="insert" *ngFor="let estudiante of estudiantes">
+    <ion-label>
+      <h5>{{estudiante.nombre}} - ({{estudiante.correo}}) </h5>
+    </ion-label>
+
+    <div class="item-note">
+      <ion-icon name="create" style="zoom: 2.0;" ></ion-icon>
+      <ion-icon name="trash" style="zoom: 2.0;" (click)="deleteStudent()"></ion-icon>
+    </div>
+   </ion-item>
+  </ion-list>
+
 </ion-content>
